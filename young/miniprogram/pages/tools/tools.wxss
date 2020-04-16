@@ -1,0 +1,9 @@
+view{
+  
+  background: #88cccc;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  justify-items: center;
+  font-size: 28rpx;
+}

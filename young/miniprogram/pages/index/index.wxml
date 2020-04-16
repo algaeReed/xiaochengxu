@@ -1,0 +1,33 @@
+<!--pages/index/index.wxml-->
+<view class="border">
+  <view class="bg">
+    <view class="title"> !俏少年!
+    </view>
+   
+    <view>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <block wx:for-items="{{newsTab}}">
+      <view data-current="{{index}}" class="tab-item {{currentTab == index ?'active':''}}" bindtap="swichNav" >
+        {{item}}
+      </view>
+    </block>
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item wx:for="{{[0,1,2,3,4]}}">
+      <scroll-view scroll-y="true" class="scoll-h">
+       
+         <view class="info">{{moto}}</view>
+          <button bindtap="goToAbout">*一个非常有趣的微信小程序!</button>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+   
+  </view>
+  <view class="refresh" bindtap="refresh"  style="background:{{refreshBg}}">{{refresh}}</view>
+
+  <button class="intro" open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if="{{!nickName}}">点我获取分享图头像昵称</button>
+<button class="intro" bindtap="createShareImage" wx:else>点我生成分享图</button>
+
+<share-box isCanDraw="{{isCanDraw}}" bind:initData="createShareImage" />
+</view>

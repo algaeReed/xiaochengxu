@@ -1,0 +1,12 @@
+<!--pages/about/about.wxml-->
+<view class="head">    
+  <text>{{msg}}</text>
+</view>
+<view class="container bg">
+     <text class="begin" bindtap="goToBegin">!开始!</text>
+     <button open-type="contact">进入客服会话</button>
+     <text>*一个非常有趣的微信小程序!</text>
+     <button bindtap="msg">订阅</button>
+     <button bindtap="gotoBiubiu">图小槽</button>
+</view>
+<view class="foot"></view>  

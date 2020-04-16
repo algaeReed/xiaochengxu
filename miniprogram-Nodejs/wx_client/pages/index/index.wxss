@@ -1,0 +1,17 @@
+.title  input ,
+.content input {
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  margin: 10px auto;
+}
+
+button {
+    background-color: #ccc;
+    width: 300px !important;
+    height: 40px !important;
+    border-radius: 20px !important;
+}

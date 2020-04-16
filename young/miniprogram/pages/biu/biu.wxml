@@ -1,0 +1,35 @@
+<view class='launchGird'>
+
+  <view class='displayGroup'>
+    <view class='dmGroup' wx:for="{{ dmData }}" wx:key="{{ item.id }}" style="top:{{ item.top }}%; animation: dmAnimation {{item.time}}s linear {{ index*3 }}s infinite; ">
+      <view class='dmItem'>
+        <view class='dm'>
+          <view class='avatarBox'>
+            <image src='{{ item.sex == 0 ? avatarBoy : avatarGirl }}' class='avatar' mode='aspectFit'></image>
+            <image src='{{ item.sex == 0 ? iconBoy : iconGirl }}' class='sex' mode='aspectFit'></image>
+          </view>
+          <text class='content'>{{ item.content }}</text>
+          <image src='{{ iconGood }}' class='icon good' mode='aspectFill'></image>
+          <text>{{ item.zanNumber }}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='focus'>
+      <image src='{{ banner }}' class='img' mode='widthFix'></image>
+    </view>
+    <view class='shadowOverlay'></view>
+
+  </view>
+  <view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <input name="biu" placeholder="来了就说点什么吧 反正也没人知道" bindinput="xiaocao" />
+      </view>
+      <view class="btn-area">
+        <button formType="submit">biubiubiu</button>
+      </view>
+    </form>
+  </view>
+   <button bindtap="goToAbout">*一个非常有趣的微信小程序!</button>
+</view>

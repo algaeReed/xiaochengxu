@@ -1,0 +1,28 @@
+<!--pages/h/h.wxml-->
+<view class="wrapper">
+  <view class="nav">
+    <view bindtap="tab_func" data-index="0" class="item {{current == '0' ? 'active' :  ''}}" >1</view>
+    <view bindtap="tab_func" data-index="1" class="item {{current == '1' ? 'active' :  ''}}" >2</view>
+    <view bindtap="tab_func" data-index="2" class="item {{current == '2' ? 'active' :  ''}}" >3</view>
+    <view bindtap="tab_func" data-index="3" class="item {{current == '3' ? 'active' :  ''}}" >4</view>
+    <view bindtap="tab_func" data-index="4" class="item {{current == '4' ? 'active' :  ''}}" >5</view>
+  </view>
+
+  <!-- <view class="content">
+   <swiper current="{{current}}">
+      <swiper-item>1</swiper-item>
+      <swiper-item>2</swiper-item>
+      <swiper-item>3</swiper-item>
+      <swiper-item>4</swiper-item>
+      <swiper-item>5</swiper-item>
+  </swiper>
+  </view> -->
+
+  <view class="list">
+   <block wx:for="{{arr}}" wx:key="index">
+    <view class="opt" wx:if="{{index==current}}">
+      {{item.num}}
+    </view>
+   </block>
+  </view>
+</view>

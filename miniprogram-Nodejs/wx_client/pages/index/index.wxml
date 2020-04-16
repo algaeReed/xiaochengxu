@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="title">
+        <input data-title="0" bindinput="input_Event" placeholder="请输入标题"></input>
+    </view>
+
+    <view class="content">
+        <input data-content="1" bindinput="input_Event" placeholder="请输入内容"></input>
+    </view>
+
+    <button bindtap="click_Event">上传图片</button>
+
+
+</view>

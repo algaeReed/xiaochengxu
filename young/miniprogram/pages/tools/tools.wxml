@@ -1,0 +1,3 @@
+<!--pages/tools/tools.wxml-->
+<!-- <view>api正在优化...</view> -->
+<view bindtap='getdata' >{{moto}}</view>
